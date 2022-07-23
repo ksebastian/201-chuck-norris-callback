@@ -9,7 +9,7 @@ from dash import dcc
 ###### Set up variables
 list_of_choices = ['Art Blakey', 'Horace Silver', 'Donald Byrd', 'Sonny Rollins']
 image_list = ['art_blakey.jpeg', 'horace_silver.jpeg', 'donald_byrd.jpeg', 'sonny_rollins.jpeg']
-githublink = 'https://github.com/ksebastian/chuck_norris_execution'
+githublink = 'https://github.com/ksebastian/201-chuck-norris-callback'
 image1 = 'blue_note_logo.jpeg'
 heading1 = 'Classic Blue Note Jazz Records'
 
