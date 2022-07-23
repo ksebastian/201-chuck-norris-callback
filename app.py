@@ -1,8 +1,10 @@
 ######### Import your libraries #######
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+#import dash_core_components as dcc
+#import dash_html_components as html
 import os
+from dash import html
+from dash import dcc
 
 ###### Set up variables
 list_of_choices=['punch', 'body-slam', 'round-house kick to the face']
