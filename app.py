@@ -8,7 +8,7 @@ from dash import dcc
 
 ###### Set up variables
 list_of_choices=['Art Blakey', 'Horace Silver', 'Donald Byrd', 'Sonny Rollins']
-list_of_images=['art_blakey.jpeg', 'horace_silver.jpeg', 'donald_byrd.jpeg', 'sonny_rollins.jpeg']
+image_list=['art_blakey.jpeg', 'horace_silver.jpeg', 'donald_byrd.jpeg', 'sonny_rollins.jpeg']
 githublink = 'https://github.com/ksebastian/chuck_norris_execution'
 image1='blue_note_logo.jpeg'
 heading1='Classic Blue Note Jazz Records'
@@ -22,7 +22,7 @@ app.title='Jazz'
 ####### Layout of the app ########
 app.layout = html.Div([
     html.H2(heading1),
-    html.Img(id='show-image', src=app.get_asset_url(image1), style={'width': 'auto', 'height': '10%'}),
+    html.Img(id='show-image', src=app.get_asset_url('blue_note_logo.jpeg')),  #, style={'width': 'auto', 'height': '10%'}),
     dcc.Dropdown(id='your-input-here',
                 options=[{'label': i, 'value': i} for i in list_of_choices],
                 value='punch',
@@ -45,7 +45,7 @@ def display_value(whatever_you_chose):
 @app.callback(dash.dependencies.Output('show-image', 'src'),
               [dash.dependencies.Input('your-input-here', 'value')])
 def display_value(whatever_you_chose):
-    return app.get_asset_url(list_of_images[whatever_you_chose])
+    return app.get_asset_url(image_list[whatever_you_chose])
 
 
 ######### Run the app #########
